@@ -30,6 +30,8 @@ final class ViewController: UIViewController {
          NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: 21)!]
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        let nib = UINib(nibName: "SettingsTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "SettingsCell")
         self.stretchHeaderView = self.tableView.tableHeaderView
         self.tableView.tableHeaderView = nil
         self.tableView.addSubview(self.stretchHeaderView)
@@ -69,11 +71,12 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 6
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsTableViewCell
+        cell.titleLabel.text = String(indexPath.row)
         return cell
     }
 }

@@ -55,13 +55,27 @@
                                     <rect key="frame" x="0.0" y="207" width="414" height="129"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tozai_T23" translatesAutoresizingMaskIntoConstraints="NO" id="3tv-Be-hgw">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-P6-WqV">
                                             <rect key="frame" x="157" y="-25" width="100" height="100"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tozai_T23" translatesAutoresizingMaskIntoConstraints="NO" id="3tv-Be-hgw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="Zn5-K1-lum"/>
+                                                        <constraint firstAttribute="width" constant="100" id="vcV-0F-3Cn"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="Zn5-K1-lum"/>
-                                                <constraint firstAttribute="width" constant="100" id="vcV-0F-3Cn"/>
+                                                <constraint firstItem="3tv-Be-hgw" firstAttribute="top" secondItem="PFC-P6-WqV" secondAttribute="top" id="PTv-LN-Xkd"/>
+                                                <constraint firstAttribute="height" constant="100" id="U6i-KA-Ckh"/>
+                                                <constraint firstAttribute="bottom" secondItem="3tv-Be-hgw" secondAttribute="bottom" id="VfI-hm-dMb"/>
+                                                <constraint firstAttribute="width" constant="100" id="dHw-8j-TiD"/>
+                                                <constraint firstAttribute="trailing" secondItem="3tv-Be-hgw" secondAttribute="trailing" id="i0p-rf-Ixp"/>
+                                                <constraint firstItem="3tv-Be-hgw" firstAttribute="leading" secondItem="PFC-P6-WqV" secondAttribute="leading" id="v73-cc-bMH"/>
                                             </constraints>
-                                        </imageView>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93l-ad-Rur">
                                             <rect key="frame" x="158" y="83" width="98" height="26"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
@@ -95,18 +109,18 @@
                                     </subviews>
                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstItem="3tv-Be-hgw" firstAttribute="top" secondItem="NeY-9I-jce" secondAttribute="top" constant="-25" id="0Fo-CT-frs"/>
+                                        <constraint firstItem="PFC-P6-WqV" firstAttribute="leading" secondItem="47b-jW-QF9" secondAttribute="trailing" id="E6f-42-Tvy"/>
                                         <constraint firstItem="ghc-EX-0q2" firstAttribute="top" secondItem="j4f-1R-gHU" secondAttribute="bottom" constant="4" id="GSc-Vp-jT2"/>
                                         <constraint firstItem="93l-ad-Rur" firstAttribute="centerX" secondItem="NeY-9I-jce" secondAttribute="centerX" id="MKp-rX-eeP"/>
+                                        <constraint firstItem="ghc-EX-0q2" firstAttribute="bottom" secondItem="PFC-P6-WqV" secondAttribute="bottom" id="MUQ-4T-dlA"/>
                                         <constraint firstItem="47b-jW-QF9" firstAttribute="leading" secondItem="NeY-9I-jce" secondAttribute="leading" id="PwX-fr-eLa"/>
-                                        <constraint firstItem="j4f-1R-gHU" firstAttribute="leading" secondItem="3tv-Be-hgw" secondAttribute="trailing" id="XZQ-2b-hB3"/>
-                                        <constraint firstItem="3tv-Be-hgw" firstAttribute="bottom" secondItem="M2s-sM-pNG" secondAttribute="bottom" id="aWD-DK-AoR"/>
-                                        <constraint firstItem="ghc-EX-0q2" firstAttribute="bottom" secondItem="3tv-Be-hgw" secondAttribute="bottom" id="ns9-H4-Sb0"/>
+                                        <constraint firstItem="PFC-P6-WqV" firstAttribute="bottom" secondItem="M2s-sM-pNG" secondAttribute="bottom" id="RO6-w5-LJ6"/>
+                                        <constraint firstItem="93l-ad-Rur" firstAttribute="top" secondItem="PFC-P6-WqV" secondAttribute="bottom" constant="8" id="TRg-KI-5eD"/>
+                                        <constraint firstItem="j4f-1R-gHU" firstAttribute="leading" secondItem="PFC-P6-WqV" secondAttribute="trailing" id="hzv-dQ-UJ1"/>
                                         <constraint firstItem="ghc-EX-0q2" firstAttribute="centerX" secondItem="j4f-1R-gHU" secondAttribute="centerX" id="nzC-pP-p34"/>
+                                        <constraint firstItem="PFC-P6-WqV" firstAttribute="top" secondItem="NeY-9I-jce" secondAttribute="top" constant="-25" id="osj-Ia-Djt"/>
                                         <constraint firstItem="M2s-sM-pNG" firstAttribute="centerX" secondItem="47b-jW-QF9" secondAttribute="centerX" id="pcO-ti-4XX"/>
-                                        <constraint firstItem="3tv-Be-hgw" firstAttribute="centerX" secondItem="NeY-9I-jce" secondAttribute="centerX" id="qgc-VJ-QEF"/>
-                                        <constraint firstItem="93l-ad-Rur" firstAttribute="top" secondItem="3tv-Be-hgw" secondAttribute="bottom" constant="8" id="u5s-pN-4dZ"/>
-                                        <constraint firstItem="3tv-Be-hgw" firstAttribute="leading" secondItem="47b-jW-QF9" secondAttribute="trailing" id="vsh-HS-0SU"/>
+                                        <constraint firstItem="PFC-P6-WqV" firstAttribute="centerX" secondItem="NeY-9I-jce" secondAttribute="centerX" id="tQl-vN-ZVf"/>
                                         <constraint firstItem="M2s-sM-pNG" firstAttribute="top" secondItem="47b-jW-QF9" secondAttribute="bottom" id="wrd-3s-0fT"/>
                                         <constraint firstAttribute="trailing" secondItem="j4f-1R-gHU" secondAttribute="trailing" id="yLs-ia-nKy"/>
                                     </constraints>
@@ -124,6 +138,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ald-rs-ldx"/>
                     <connections>
+                        <outlet property="profileImageBaseView" destination="PFC-P6-WqV" id="Pd9-SG-mRV"/>
                         <outlet property="profileImageView" destination="3tv-Be-hgw" id="UvD-Fj-QVH"/>
                         <outlet property="profileView" destination="NeY-9I-jce" id="OqP-3V-Clr"/>
                         <outlet property="stretchHeaderView" destination="X5h-wF-xEH" id="tyM-aZ-95d"/>

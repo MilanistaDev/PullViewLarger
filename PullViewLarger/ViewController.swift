@@ -13,6 +13,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var stretchHeaderView: UIView!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var profileImageBaseView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
 
     private let tableHeaderHeight: CGFloat = 200.0
@@ -29,15 +30,22 @@ final class ViewController: UIViewController {
          NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: 21)!]
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
-        self.profileImageView.layer.borderColor = UIColor.white.cgColor
-        self.profileImageView.layer.borderWidth = 2.0
         self.stretchHeaderView = self.tableView.tableHeaderView
         self.tableView.tableHeaderView = nil
         self.tableView.addSubview(self.stretchHeaderView)
         self.tableView.bringSubviewToFront(self.profileView)
         self.tableView.contentInset = UIEdgeInsets(top: tableHeaderHeight, left: 0.0, bottom: 0.0, right: 0.0)
         self.tableView.contentOffset = CGPoint(x: 0.0, y: -tableHeaderHeight)
+        self.profileImageBaseView.layer.cornerRadius = self.profileImageBaseView.frame.width / 2
+        self.profileImageBaseView.layer.shadowColor = UIColor.black.cgColor
+        self.profileImageBaseView.layer.shadowOpacity = 0.5
+        self.profileImageBaseView.layer.shadowOffset = .zero
+        self.profileImageBaseView.layer.shadowRadius = 5.0
+        self.profileImageView.clipsToBounds = true
+        self.profileImageView.layer.cornerRadius = self.profileImageBaseView.frame.width / 2
+        self.profileImageBaseView.layer.borderColor = UIColor.white.cgColor
+        self.profileImageBaseView.layer.borderWidth = 2.0
+
         self.updateHeaderView()
     }
 

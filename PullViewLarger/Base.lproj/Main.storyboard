@@ -98,9 +98,9 @@
                                         <constraint firstItem="3tv-Be-hgw" firstAttribute="top" secondItem="NeY-9I-jce" secondAttribute="top" constant="-25" id="0Fo-CT-frs"/>
                                         <constraint firstItem="ghc-EX-0q2" firstAttribute="top" secondItem="j4f-1R-gHU" secondAttribute="bottom" constant="4" id="GSc-Vp-jT2"/>
                                         <constraint firstItem="93l-ad-Rur" firstAttribute="centerX" secondItem="NeY-9I-jce" secondAttribute="centerX" id="MKp-rX-eeP"/>
+                                        <constraint firstItem="47b-jW-QF9" firstAttribute="leading" secondItem="NeY-9I-jce" secondAttribute="leading" id="PwX-fr-eLa"/>
                                         <constraint firstItem="j4f-1R-gHU" firstAttribute="leading" secondItem="3tv-Be-hgw" secondAttribute="trailing" id="XZQ-2b-hB3"/>
                                         <constraint firstItem="3tv-Be-hgw" firstAttribute="bottom" secondItem="M2s-sM-pNG" secondAttribute="bottom" id="aWD-DK-AoR"/>
-                                        <constraint firstItem="47b-jW-QF9" firstAttribute="leading" secondItem="NeY-9I-jce" secondAttribute="leading" id="cWX-qw-9KB"/>
                                         <constraint firstItem="ghc-EX-0q2" firstAttribute="bottom" secondItem="3tv-Be-hgw" secondAttribute="bottom" id="ns9-H4-Sb0"/>
                                         <constraint firstItem="ghc-EX-0q2" firstAttribute="centerX" secondItem="j4f-1R-gHU" secondAttribute="centerX" id="nzC-pP-p34"/>
                                         <constraint firstItem="M2s-sM-pNG" firstAttribute="centerX" secondItem="47b-jW-QF9" secondAttribute="centerX" id="pcO-ti-4XX"/>
@@ -126,6 +126,7 @@
                     <connections>
                         <outlet property="profileImageView" destination="3tv-Be-hgw" id="UvD-Fj-QVH"/>
                         <outlet property="profileView" destination="NeY-9I-jce" id="OqP-3V-Clr"/>
+                        <outlet property="stretchHeaderView" destination="X5h-wF-xEH" id="tyM-aZ-95d"/>
                         <outlet property="tableView" destination="sku-jy-Hq1" id="amD-2r-ACz"/>
                     </connections>
                 </viewController>

@@ -1,24 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ApJ-aY-hfC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="HQq-7f-1m9">
+            <objects>
+                <navigationController id="ApJ-aY-hfC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s7V-EV-Gxb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.29090598229999998" green="0.64298564199999997" blue="0.83924210070000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rxO-uG-bzM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9BK-Kw-vRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-629" y="137"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PullViewLarger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sku-jy-Hq1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="X5h-wF-xEH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="T19_07Series_B_Done" translatesAutoresizingMaskIntoConstraints="NO" id="vwA-30-Uva">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="vwA-30-Uva" firstAttribute="leading" secondItem="X5h-wF-xEH" secondAttribute="leading" id="1kL-L9-f3o"/>
+                                        <constraint firstAttribute="bottom" secondItem="vwA-30-Uva" secondAttribute="bottom" id="SnQ-aQ-d6i"/>
+                                        <constraint firstItem="vwA-30-Uva" firstAttribute="top" secondItem="X5h-wF-xEH" secondAttribute="top" id="atZ-AE-aDO"/>
+                                        <constraint firstAttribute="trailing" secondItem="vwA-30-Uva" secondAttribute="trailing" id="vXB-2n-M8Z"/>
+                                    </constraints>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="NeY-9I-jce">
+                                    <rect key="frame" x="0.0" y="207" width="414" height="129"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tozai_T23" translatesAutoresizingMaskIntoConstraints="NO" id="3tv-Be-hgw">
+                                            <rect key="frame" x="157" y="-25" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="Zn5-K1-lum"/>
+                                                <constraint firstAttribute="width" constant="100" id="vcV-0F-3Cn"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93l-ad-Rur">
+                                            <rect key="frame" x="158" y="83" width="98" height="26"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47b-jW-QF9">
+                                            <rect key="frame" x="0.0" y="25.5" width="157" height="30"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07-104F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-1R-gHU">
+                                            <rect key="frame" x="257" y="28" width="157" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RIDES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2s-sM-pNG">
+                                            <rect key="frame" x="57.5" y="55.5" width="42" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghc-EX-0q2">
+                                            <rect key="frame" x="321.5" y="55.5" width="28.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="3tv-Be-hgw" firstAttribute="top" secondItem="NeY-9I-jce" secondAttribute="top" constant="-25" id="0Fo-CT-frs"/>
+                                        <constraint firstItem="ghc-EX-0q2" firstAttribute="top" secondItem="j4f-1R-gHU" secondAttribute="bottom" constant="4" id="GSc-Vp-jT2"/>
+                                        <constraint firstItem="93l-ad-Rur" firstAttribute="centerX" secondItem="NeY-9I-jce" secondAttribute="centerX" id="MKp-rX-eeP"/>
+                                        <constraint firstItem="j4f-1R-gHU" firstAttribute="leading" secondItem="3tv-Be-hgw" secondAttribute="trailing" id="XZQ-2b-hB3"/>
+                                        <constraint firstItem="3tv-Be-hgw" firstAttribute="bottom" secondItem="M2s-sM-pNG" secondAttribute="bottom" id="aWD-DK-AoR"/>
+                                        <constraint firstItem="47b-jW-QF9" firstAttribute="leading" secondItem="NeY-9I-jce" secondAttribute="leading" id="cWX-qw-9KB"/>
+                                        <constraint firstItem="ghc-EX-0q2" firstAttribute="bottom" secondItem="3tv-Be-hgw" secondAttribute="bottom" id="ns9-H4-Sb0"/>
+                                        <constraint firstItem="ghc-EX-0q2" firstAttribute="centerX" secondItem="j4f-1R-gHU" secondAttribute="centerX" id="nzC-pP-p34"/>
+                                        <constraint firstItem="M2s-sM-pNG" firstAttribute="centerX" secondItem="47b-jW-QF9" secondAttribute="centerX" id="pcO-ti-4XX"/>
+                                        <constraint firstItem="3tv-Be-hgw" firstAttribute="centerX" secondItem="NeY-9I-jce" secondAttribute="centerX" id="qgc-VJ-QEF"/>
+                                        <constraint firstItem="93l-ad-Rur" firstAttribute="top" secondItem="3tv-Be-hgw" secondAttribute="bottom" constant="8" id="u5s-pN-4dZ"/>
+                                        <constraint firstItem="3tv-Be-hgw" firstAttribute="leading" secondItem="47b-jW-QF9" secondAttribute="trailing" id="vsh-HS-0SU"/>
+                                        <constraint firstItem="M2s-sM-pNG" firstAttribute="top" secondItem="47b-jW-QF9" secondAttribute="bottom" id="wrd-3s-0fT"/>
+                                        <constraint firstAttribute="trailing" secondItem="j4f-1R-gHU" secondAttribute="trailing" id="yLs-ia-nKy"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sku-jy-Hq1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SXV-wD-YXD"/>
+                            <constraint firstItem="sku-jy-Hq1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dHF-8L-wcu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sku-jy-Hq1" secondAttribute="trailing" id="pya-eA-6SX"/>
+                            <constraint firstAttribute="bottom" secondItem="sku-jy-Hq1" secondAttribute="bottom" id="uNO-Oc-gBi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ald-rs-ldx"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="3tv-Be-hgw" id="UvD-Fj-QVH"/>
+                        <outlet property="profileView" destination="NeY-9I-jce" id="OqP-3V-Clr"/>
+                        <outlet property="tableView" destination="sku-jy-Hq1" id="amD-2r-ACz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="136.60714285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="T19_07Series_B_Done" width="2016" height="1008"/>
+        <image name="Tozai_T23" width="2016" height="1512"/>
+    </resources>
 </document>

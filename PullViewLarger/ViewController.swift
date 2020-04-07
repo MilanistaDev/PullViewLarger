@@ -11,12 +11,10 @@ import UIKit
 final class ViewController: UIViewController {
 
     @IBOutlet weak var stretchHeaderView: UIView!
-    @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var profileImageBaseView: UIView!
-    @IBOutlet weak var profileImageView: UIImageView!
 
     private let tableHeaderHeight: CGFloat = 200.0
+    private let settingsContents: [String] = ["Personal information", "About this App", "Privacy policy", "Feedback", "App version"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,27 +25,19 @@ final class ViewController: UIViewController {
         self.navigationItem.title = "Settings"
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white,
-         NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: 21)!]
+         NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: 19)!]
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        let nib = UINib(nibName: "SettingsTableViewCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "SettingsCell")
+        self.tableView.tableFooterView = UIView(frame: .zero)
+        let profileCell = UINib(nibName: "ProfileTableViewCell", bundle: nil)
+        self.tableView.register(profileCell, forCellReuseIdentifier: "ProfileCell")
+        let contentCell = UINib(nibName: "SettingsTableViewCell", bundle: nil)
+        self.tableView.register(contentCell, forCellReuseIdentifier: "SettingsCell")
         self.stretchHeaderView = self.tableView.tableHeaderView
         self.tableView.tableHeaderView = nil
         self.tableView.addSubview(self.stretchHeaderView)
-        self.tableView.bringSubviewToFront(self.profileView)
         self.tableView.contentInset = UIEdgeInsets(top: tableHeaderHeight, left: 0.0, bottom: 0.0, right: 0.0)
         self.tableView.contentOffset = CGPoint(x: 0.0, y: -tableHeaderHeight)
-        self.profileImageBaseView.layer.cornerRadius = self.profileImageBaseView.frame.width / 2
-        self.profileImageBaseView.layer.shadowColor = UIColor.black.cgColor
-        self.profileImageBaseView.layer.shadowOpacity = 0.5
-        self.profileImageBaseView.layer.shadowOffset = .zero
-        self.profileImageBaseView.layer.shadowRadius = 5.0
-        self.profileImageView.clipsToBounds = true
-        self.profileImageView.layer.cornerRadius = self.profileImageBaseView.frame.width / 2
-        self.profileImageBaseView.layer.borderColor = UIColor.white.cgColor
-        self.profileImageBaseView.layer.borderWidth = 2.0
-
         self.updateHeaderView()
     }
 
@@ -67,17 +57,26 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return section == 0 ? 1 : self.settingsContents.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsTableViewCell
-        cell.titleLabel.text = String(indexPath.row)
-        return cell
+
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileTableViewCell
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsTableViewCell
+            cell.titleLabel.text = self.settingsContents[indexPath.row]
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }
 

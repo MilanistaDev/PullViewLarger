@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="142" id="KGk-i7-Jjw" customClass="ProfileTableViewCell" customModule="PullViewLarger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="497" height="142"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="497" height="142"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VD7-AX-oke">
+                        <rect key="frame" x="0.0" y="29.5" width="208.5" height="23.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07-104F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-La-oB5">
+                        <rect key="frame" x="288.5" y="29.5" width="208.5" height="23.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdM-pt-5NB">
+                        <rect key="frame" x="208.5" y="0.0" width="80" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tozai_T23" translatesAutoresizingMaskIntoConstraints="NO" id="0eQ-No-acC">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="1FM-GL-gT9"/>
+                            <constraint firstAttribute="trailing" secondItem="0eQ-No-acC" secondAttribute="trailing" id="GYN-bs-79y"/>
+                            <constraint firstItem="0eQ-No-acC" firstAttribute="leading" secondItem="sdM-pt-5NB" secondAttribute="leading" id="Wdv-5G-djc"/>
+                            <constraint firstAttribute="height" constant="80" id="Xfu-H9-4dg"/>
+                            <constraint firstAttribute="bottom" secondItem="0eQ-No-acC" secondAttribute="bottom" id="hYH-bV-LHz"/>
+                            <constraint firstItem="0eQ-No-acC" firstAttribute="top" secondItem="sdM-pt-5NB" secondAttribute="top" id="yz9-im-II4"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcQ-uW-9fE">
+                        <rect key="frame" x="199.5" y="88" width="98" height="42"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RIDES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8je-tr-f1L">
+                        <rect key="frame" x="86" y="53" width="36.5" height="17"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnp-3q-PLb">
+                        <rect key="frame" x="380.5" y="53" width="25" height="17"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="H5c-La-oB5" firstAttribute="leading" secondItem="sdM-pt-5NB" secondAttribute="trailing" id="1gs-3W-d0G"/>
+                    <constraint firstItem="PcQ-uW-9fE" firstAttribute="top" secondItem="sdM-pt-5NB" secondAttribute="bottom" constant="8" id="AeI-De-jom"/>
+                    <constraint firstItem="8je-tr-f1L" firstAttribute="centerX" secondItem="VD7-AX-oke" secondAttribute="centerX" id="O7b-Us-zXx"/>
+                    <constraint firstItem="bnp-3q-PLb" firstAttribute="centerX" secondItem="H5c-La-oB5" secondAttribute="centerX" id="Sdc-kW-yrk"/>
+                    <constraint firstItem="sdM-pt-5NB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UR7-BF-sG4"/>
+                    <constraint firstItem="sdM-pt-5NB" firstAttribute="leading" secondItem="VD7-AX-oke" secondAttribute="trailing" id="WYb-oy-9q1"/>
+                    <constraint firstAttribute="trailing" secondItem="H5c-La-oB5" secondAttribute="trailing" id="Zle-NV-OTL"/>
+                    <constraint firstItem="sdM-pt-5NB" firstAttribute="bottom" secondItem="8je-tr-f1L" secondAttribute="bottom" constant="10" id="eZo-G8-2Pb"/>
+                    <constraint firstAttribute="bottom" secondItem="PcQ-uW-9fE" secondAttribute="bottom" constant="12" id="iwN-nq-a5W"/>
+                    <constraint firstItem="bnp-3q-PLb" firstAttribute="bottom" secondItem="sdM-pt-5NB" secondAttribute="bottom" constant="-10" id="jWq-zK-Z8T"/>
+                    <constraint firstItem="PcQ-uW-9fE" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="l44-us-0FU"/>
+                    <constraint firstItem="sdM-pt-5NB" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="pFA-Dq-fbe"/>
+                    <constraint firstItem="8je-tr-f1L" firstAttribute="top" secondItem="VD7-AX-oke" secondAttribute="bottom" id="rue-dP-tTu"/>
+                    <constraint firstItem="VD7-AX-oke" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sSu-QI-sgm"/>
+                    <constraint firstItem="bnp-3q-PLb" firstAttribute="top" secondItem="H5c-La-oB5" secondAttribute="bottom" id="xUn-Hh-ACr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="profileBaseView" destination="sdM-pt-5NB" id="678-CN-dOL"/>
+                <outlet property="profileImageView" destination="0eQ-No-acC" id="Btx-hQ-2WJ"/>
+                <outlet property="rideCountLabel" destination="VD7-AX-oke" id="4Zl-7q-NOB"/>
+                <outlet property="topRideLabel" destination="H5c-La-oB5" id="xdo-pB-eA3"/>
+                <outlet property="userNameLabel" destination="PcQ-uW-9fE" id="GZh-oA-ydt"/>
+            </connections>
+            <point key="canvasLocation" x="55.797101449275367" y="86.383928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Tozai_T23" width="2016" height="1512"/>
+    </resources>
+</document>

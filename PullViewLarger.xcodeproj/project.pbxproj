@@ -17,6 +17,8 @@
 		FD82C2F6243B2FF700BDFB1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD82C2F4243B2FF700BDFB1A /* Main.storyboard */; };
 		FD82C2F8243B2FF700BDFB1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD82C2F7243B2FF700BDFB1A /* Assets.xcassets */; };
 		FD82C2FB243B2FF700BDFB1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD82C2F9243B2FF700BDFB1A /* LaunchScreen.storyboard */; };
+		FD82C304243DC16200BDFB1A /* AppVersionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82C302243DC16200BDFB1A /* AppVersionTableViewCell.swift */; };
+		FD82C305243DC16200BDFB1A /* AppVersionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD82C303243DC16200BDFB1A /* AppVersionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		FD82C2F7243B2FF700BDFB1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD82C2FA243B2FF700BDFB1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD82C2FC243B2FF700BDFB1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD82C302243DC16200BDFB1A /* AppVersionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionTableViewCell.swift; sourceTree = "<group>"; };
+		FD82C303243DC16200BDFB1A /* AppVersionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppVersionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				FD1101A3243B8D27008A26AC /* SettingsTableViewCell.xib */,
 				FD1101A6243C9E2E008A26AC /* ProfileTableViewCell.swift */,
 				FD1101A7243C9E2E008A26AC /* ProfileTableViewCell.xib */,
+				FD82C302243DC16200BDFB1A /* AppVersionTableViewCell.swift */,
+				FD82C303243DC16200BDFB1A /* AppVersionTableViewCell.xib */,
 			);
 			path = PullViewLarger;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD82C305243DC16200BDFB1A /* AppVersionTableViewCell.xib in Resources */,
 				FD82C2FB243B2FF700BDFB1A /* LaunchScreen.storyboard in Resources */,
 				FD82C2F8243B2FF700BDFB1A /* Assets.xcassets in Resources */,
 				FD1101A5243B8D27008A26AC /* SettingsTableViewCell.xib in Resources */,
@@ -156,6 +163,7 @@
 				FD82C2EF243B2FF700BDFB1A /* AppDelegate.swift in Sources */,
 				FD1101A4243B8D27008A26AC /* SettingsTableViewCell.swift in Sources */,
 				FD1101A8243C9E2E008A26AC /* ProfileTableViewCell.swift in Sources */,
+				FD82C304243DC16200BDFB1A /* AppVersionTableViewCell.swift in Sources */,
 				FD82C2F1243B2FF700BDFB1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +315,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.PullViewLarger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -325,6 +334,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.PullViewLarger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

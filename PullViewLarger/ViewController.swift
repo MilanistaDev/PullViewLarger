@@ -35,6 +35,8 @@ final class ViewController: UIViewController {
         self.tableView.register(profileCell, forCellReuseIdentifier: "ProfileCell")
         let contentCell = UINib(nibName: "SettingsTableViewCell", bundle: nil)
         self.tableView.register(contentCell, forCellReuseIdentifier: "SettingsCell")
+        let appVerCell = UINib(nibName: "AppVersionTableViewCell", bundle: nil)
+        self.tableView.register(appVerCell, forCellReuseIdentifier: "AppVerCell")
         self.stretchHeaderView = self.tableView.tableHeaderView
         self.tableView.tableHeaderView = nil
         self.tableView.addSubview(self.stretchHeaderView)
@@ -80,6 +82,12 @@ extension ViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileTableViewCell
+            return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AppVerCell", for: indexPath) as! AppVersionTableViewCell
+            cell.titleLabel.text = self.settingsContents[indexPath.section - 1][indexPath.row]
+            let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+            cell.detailTitleLabel.text = version
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsTableViewCell

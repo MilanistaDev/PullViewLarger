@@ -66,6 +66,7 @@ final class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.settingsContents.count + 1
     }
@@ -95,6 +96,10 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView(frame: CGRect(x: 0.0,

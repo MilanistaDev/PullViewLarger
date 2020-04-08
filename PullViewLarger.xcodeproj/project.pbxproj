@@ -49,6 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD1101AA243E091D008A26AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD1101A2243B8D27008A26AC /* SettingsTableViewCell.swift */,
+				FD1101A3243B8D27008A26AC /* SettingsTableViewCell.xib */,
+				FD1101A6243C9E2E008A26AC /* ProfileTableViewCell.swift */,
+				FD1101A7243C9E2E008A26AC /* ProfileTableViewCell.xib */,
+				FD82C302243DC16200BDFB1A /* AppVersionTableViewCell.swift */,
+				FD82C303243DC16200BDFB1A /* AppVersionTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FD82C2E2243B2FF700BDFB1A = {
 			isa = PBXGroup;
 			children = (
@@ -75,12 +88,7 @@
 				FD82C2F7243B2FF700BDFB1A /* Assets.xcassets */,
 				FD82C2F9243B2FF700BDFB1A /* LaunchScreen.storyboard */,
 				FD82C2FC243B2FF700BDFB1A /* Info.plist */,
-				FD1101A2243B8D27008A26AC /* SettingsTableViewCell.swift */,
-				FD1101A3243B8D27008A26AC /* SettingsTableViewCell.xib */,
-				FD1101A6243C9E2E008A26AC /* ProfileTableViewCell.swift */,
-				FD1101A7243C9E2E008A26AC /* ProfileTableViewCell.xib */,
-				FD82C302243DC16200BDFB1A /* AppVersionTableViewCell.swift */,
-				FD82C303243DC16200BDFB1A /* AppVersionTableViewCell.xib */,
+				FD1101AA243E091D008A26AC /* View */,
 			);
 			path = PullViewLarger;
 			sourceTree = "<group>";

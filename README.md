@@ -8,7 +8,7 @@ For example, this implementation can use for Profile Screen.
 ## Environment
 
 * Xcode 11.4 
-* iOS 13 (Maybe work other iOS versions. Need to change iOS Deployment Target.)
+* iOS 13 (Maybe works on other iOS version's devices. Need to change iOS Deployment Target.)
 * macOS Catalina 10.15.4
 
 ## GIF

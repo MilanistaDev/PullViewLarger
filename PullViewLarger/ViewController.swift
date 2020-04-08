@@ -16,6 +16,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     private let tableHeaderHeight: CGFloat = 200.0
+    private let tableFooterHeight: CGFloat = 16.0
     private let settingsContents: [[String]] = [["Personal information"], ["About this App", "Privacy policy", "Feedback"], ["App version"]]
 
     override func viewDidLoad() {
@@ -64,10 +65,6 @@ final class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate {
-
-}
-
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.settingsContents.count + 1
@@ -95,12 +92,15 @@ extension ViewController: UITableViewDataSource {
             return cell
         }
     }
+}
+
+extension ViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView(frame: CGRect(x: 0.0,
                                               y: 0.0,
                                               width: self.tableView.frame.width,
-                                              height: 16.0))
+                                              height: tableFooterHeight))
         footerView.backgroundColor = .systemGroupedBackground
         return footerView
     }
@@ -108,7 +108,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         switch section {
         case 1, 2:
-            return 16.0
+            return tableFooterHeight
         default:
             return 0.0
         }

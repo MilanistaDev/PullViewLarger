@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ApJ-aY-hfC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ApJ-aY-hfC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +34,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sku-jy-Hq1">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="X5h-wF-xEH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,12 +42,31 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="T19_07Series_B_Done" translatesAutoresizingMaskIntoConstraints="NO" id="vwA-30-Uva">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eu-c5-USd">
+                                            <rect key="frame" x="167" y="187" width="80" height="80"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tozai_T23" translatesAutoresizingMaskIntoConstraints="NO" id="6Wb-qW-mlV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="6Wb-qW-mlV" secondAttribute="bottom" id="DeO-vb-Mbp"/>
+                                                <constraint firstItem="6Wb-qW-mlV" firstAttribute="leading" secondItem="6eu-c5-USd" secondAttribute="leading" id="OYI-A7-tnO"/>
+                                                <constraint firstAttribute="width" constant="80" id="Vvh-Ew-3Xf"/>
+                                                <constraint firstAttribute="height" constant="80" id="gkz-jH-J5d"/>
+                                                <constraint firstAttribute="trailing" secondItem="6Wb-qW-mlV" secondAttribute="trailing" id="i6P-MX-6Yo"/>
+                                                <constraint firstItem="6Wb-qW-mlV" firstAttribute="top" secondItem="6eu-c5-USd" secondAttribute="top" id="mrT-yc-fby"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstItem="vwA-30-Uva" firstAttribute="leading" secondItem="X5h-wF-xEH" secondAttribute="leading" id="1kL-L9-f3o"/>
                                         <constraint firstAttribute="bottom" secondItem="vwA-30-Uva" secondAttribute="bottom" id="SnQ-aQ-d6i"/>
                                         <constraint firstItem="vwA-30-Uva" firstAttribute="top" secondItem="X5h-wF-xEH" secondAttribute="top" id="atZ-AE-aDO"/>
+                                        <constraint firstAttribute="bottom" secondItem="6eu-c5-USd" secondAttribute="bottom" constant="-60" id="gB1-wT-FHl"/>
+                                        <constraint firstItem="6eu-c5-USd" firstAttribute="centerX" secondItem="X5h-wF-xEH" secondAttribute="centerX" id="v6Y-d3-ZHz"/>
                                         <constraint firstAttribute="trailing" secondItem="vwA-30-Uva" secondAttribute="trailing" id="vXB-2n-M8Z"/>
                                     </constraints>
                                 </view>
@@ -64,6 +83,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ald-rs-ldx"/>
                     <connections>
+                        <outlet property="profileBaseView" destination="6eu-c5-USd" id="ilt-J3-Pxq"/>
+                        <outlet property="profileImageView" destination="6Wb-qW-mlV" id="ATV-6W-sjz"/>
                         <outlet property="stretchHeaderView" destination="X5h-wF-xEH" id="tyM-aZ-95d"/>
                         <outlet property="tableView" destination="sku-jy-Hq1" id="amD-2r-ACz"/>
                     </connections>
@@ -75,5 +96,6 @@
     </scenes>
     <resources>
         <image name="T19_07Series_B_Done" width="2016" height="1008"/>
+        <image name="Tozai_T23" width="2016" height="1512"/>
     </resources>
 </document>

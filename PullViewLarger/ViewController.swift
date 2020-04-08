@@ -11,10 +11,12 @@ import UIKit
 final class ViewController: UIViewController {
 
     @IBOutlet weak var stretchHeaderView: UIView!
+    @IBOutlet weak var profileBaseView: UIView!
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
 
     private let tableHeaderHeight: CGFloat = 200.0
-    private let settingsContents: [String] = ["Personal information", "About this App", "Privacy policy", "Feedback", "App version"]
+    private let settingsContents: [[String]] = [["Personal information"], ["About this App", "Privacy policy", "Feedback"], ["App version"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,7 @@ final class ViewController: UIViewController {
         self.navigationItem.title = "Settings"
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white,
-         NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: 19)!]
+             NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: 19.0)!]
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView(frame: .zero)
@@ -38,6 +40,15 @@ final class ViewController: UIViewController {
         self.tableView.addSubview(self.stretchHeaderView)
         self.tableView.contentInset = UIEdgeInsets(top: tableHeaderHeight, left: 0.0, bottom: 0.0, right: 0.0)
         self.tableView.contentOffset = CGPoint(x: 0.0, y: -tableHeaderHeight)
+        self.profileBaseView.layer.cornerRadius = self.profileBaseView.frame.width / 2
+        self.profileBaseView.layer.borderColor = UIColor.white.cgColor
+        self.profileBaseView.layer.borderWidth = 2.0
+        self.profileBaseView.layer.shadowColor = UIColor.black.cgColor
+        self.profileBaseView.layer.shadowOpacity = 0.5
+        self.profileBaseView.layer.shadowOffset = .zero
+        self.profileBaseView.layer.shadowRadius = 5.0
+        self.profileImageView.clipsToBounds = true
+        self.profileImageView.layer.cornerRadius = self.profileBaseView.frame.width / 2
         self.updateHeaderView()
     }
 
@@ -57,11 +68,11 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return self.settingsContents.count + 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : self.settingsContents.count
+        return section == 0 ? 1 : self.settingsContents[section - 1].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,12 +81,28 @@ extension ViewController: UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileTableViewCell
             return cell
-        case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsTableViewCell
-            cell.titleLabel.text = self.settingsContents[indexPath.row]
-            return cell
         default:
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsTableViewCell
+            cell.titleLabel.text = self.settingsContents[indexPath.section - 1][indexPath.row]
+            return cell
+        }
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRect(x: 0.0,
+                                              y: 0.0,
+                                              width: self.tableView.frame.width,
+                                              height: 16.0))
+        footerView.backgroundColor = .systemGroupedBackground
+        return footerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        switch section {
+        case 1, 2:
+            return 16.0
+        default:
+            return 0.0
         }
     }
 }

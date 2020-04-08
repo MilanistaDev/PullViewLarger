@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppVersionTableViewCell: UITableViewCell {
+class AppVersionTableViewCell: UITableViewCell, Nibable {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailTitleLabel: UILabel!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileTableViewCell: UITableViewCell {
+class ProfileTableViewCell: UITableViewCell, Nibable {
 
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var rideCountLabel: UILabel!

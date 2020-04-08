@@ -11,6 +11,9 @@
 		FD1101A5243B8D27008A26AC /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1101A3243B8D27008A26AC /* SettingsTableViewCell.xib */; };
 		FD1101A8243C9E2E008A26AC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1101A6243C9E2E008A26AC /* ProfileTableViewCell.swift */; };
 		FD1101A9243C9E2E008A26AC /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1101A7243C9E2E008A26AC /* ProfileTableViewCell.xib */; };
+		FD1101AD243E0B8F008A26AC /* NSObjectProtocol+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1101AC243E0B8F008A26AC /* NSObjectProtocol+ClassName.swift */; };
+		FD1101AF243E0BDB008A26AC /* UITableView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1101AE243E0BDB008A26AC /* UITableView+Cell.swift */; };
+		FD1101B2243E0C3D008A26AC /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1101B1243E0C3D008A26AC /* Nibable.swift */; };
 		FD82C2EF243B2FF700BDFB1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82C2EE243B2FF700BDFB1A /* AppDelegate.swift */; };
 		FD82C2F1243B2FF700BDFB1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82C2F0243B2FF700BDFB1A /* SceneDelegate.swift */; };
 		FD82C2F3243B2FF700BDFB1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82C2F2243B2FF700BDFB1A /* ViewController.swift */; };
@@ -26,6 +29,9 @@
 		FD1101A3243B8D27008A26AC /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		FD1101A6243C9E2E008A26AC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		FD1101A7243C9E2E008A26AC /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		FD1101AC243E0B8F008A26AC /* NSObjectProtocol+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObjectProtocol+ClassName.swift"; sourceTree = "<group>"; };
+		FD1101AE243E0BDB008A26AC /* UITableView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Cell.swift"; sourceTree = "<group>"; };
+		FD1101B1243E0C3D008A26AC /* Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibable.swift; sourceTree = "<group>"; };
 		FD82C2EB243B2FF700BDFB1A /* PullViewLarger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PullViewLarger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD82C2EE243B2FF700BDFB1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD82C2F0243B2FF700BDFB1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FD1101AB243E0B07008A26AC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FD1101AC243E0B8F008A26AC /* NSObjectProtocol+ClassName.swift */,
+				FD1101AE243E0BDB008A26AC /* UITableView+Cell.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FD1101B0243E0C18008A26AC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FD1101B1243E0C3D008A26AC /* Nibable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		FD82C2E2243B2FF700BDFB1A = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +112,8 @@
 				FD82C2F9243B2FF700BDFB1A /* LaunchScreen.storyboard */,
 				FD82C2FC243B2FF700BDFB1A /* Info.plist */,
 				FD1101AA243E091D008A26AC /* View */,
+				FD1101B0243E0C18008A26AC /* Protocol */,
+				FD1101AB243E0B07008A26AC /* Extension */,
 			);
 			path = PullViewLarger;
 			sourceTree = "<group>";
@@ -169,8 +194,11 @@
 			files = (
 				FD82C2F3243B2FF700BDFB1A /* ViewController.swift in Sources */,
 				FD82C2EF243B2FF700BDFB1A /* AppDelegate.swift in Sources */,
+				FD1101AD243E0B8F008A26AC /* NSObjectProtocol+ClassName.swift in Sources */,
 				FD1101A4243B8D27008A26AC /* SettingsTableViewCell.swift in Sources */,
+				FD1101B2243E0C3D008A26AC /* Nibable.swift in Sources */,
 				FD1101A8243C9E2E008A26AC /* ProfileTableViewCell.swift in Sources */,
+				FD1101AF243E0BDB008A26AC /* UITableView+Cell.swift in Sources */,
 				FD82C304243DC16200BDFB1A /* AppVersionTableViewCell.swift in Sources */,
 				FD82C2F1243B2FF700BDFB1A /* SceneDelegate.swift in Sources */,
 			);

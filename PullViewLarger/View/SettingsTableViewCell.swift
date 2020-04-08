@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsTableViewCell: UITableViewCell {
+class SettingsTableViewCell: UITableViewCell, Nibable {
 
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {

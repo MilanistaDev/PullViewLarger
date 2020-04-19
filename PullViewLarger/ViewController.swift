@@ -103,7 +103,11 @@ extension ViewController: UITableViewDelegate {
                                               y: 0.0,
                                               width: self.tableView.frame.width,
                                               height: tableFooterHeight))
-        footerView.backgroundColor = .systemGroupedBackground
+        if #available(iOS 13.0, *) {
+            footerView.backgroundColor = .systemGroupedBackground
+        } else {
+            footerView.backgroundColor = .groupTableViewBackground
+        }
         return footerView
     }
 
